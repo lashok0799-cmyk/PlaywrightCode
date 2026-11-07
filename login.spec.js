@@ -9,7 +9,7 @@ test ('Simple Login function', async ({page})=>{
     await page.getByRole('button',{name:"Next"}).click();
     await page.getByRole('textbox',{name:"Enter your password"}).fill("2LOGIN@man");
     await page.getByRole('button',{name:"Next"}).click();
-    let Link_text = await page.getByText("strong");
+    const Link_text = await page.getByText("strong");
     await page.goto('${Link_test}').waitForLoadState('networkfile');
 
 
